@@ -31,3 +31,29 @@
   margin: 25px auto;
   transition: background 500ms;
 }
+
+.redBulb{
+  height: 150px;
+  width: 150px;
+  background-color: red;
+  border-radius: 50%;
+  margin: 25px auto;
+  transition: background 500ms;
+}
+
+.yellowBulb{
+  height: 150px;
+  width: 150px;
+  background-color: yellow;
+  border-radius: 50%;
+  margin: 25px auto;
+  transition: background 500ms;
+}
+.greenBulb{
+  height: 150px;
+  width: 150px;
+  background-color: green;
+  border-radius: 50%;
+  margin: 25px auto;
+  transition: background 500ms;
+}
