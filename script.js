@@ -10,21 +10,49 @@
 */
 
 
+
+const redLightDiv = document.getElementById("stopLight");
+const yellowLightDiv = document.getElementById('slowLight');
+const greenLightDiv = document.getElementById('goLight');
+
 // RED LIGHT ******************
 
 const redLightButton = document.querySelector('#stopButton');
 
 redLightButton.addEventListener('click', () => {
-const redLightDiv = document.getElementById("stopLight");
-redLightDiv.className = "redBulb";
+// toggle red bulbs on/off
+ redLightDiv.classList.toggle('bulb');
+ redLightDiv.classList.toggle('redBulb');
+
+if (yellowLightDiv.classList.contains('yellowBulb')) {
+
+  yellowLightDiv.classList.toggle('bulb');
+  yellowLightDiv.classList.toggle('yellowBulb');
+}
+if (greenLightDiv.classList.contains('greenBulb')) {
+   greenLightDiv.classList.toggle('bulb');
+   greenLightDiv.classList.toggle('greenBulb');
+} {
+}
 })
 
 // YELLOW LIGHT ********************
 const yellowLightButton = document.querySelector('#slowButton');
 
 yellowLightButton.addEventListener('click', () => {
-const yellowLightDiv = document.getElementById('slowLight');
-yellowLightDiv.className = "yellowBulb";
+
+  yellowLightDiv.classList.toggle('bulb');
+  yellowLightDiv.classList.toggle('yellowBulb');
+
+  if (redLightDiv.classList.contains('redBulb')) {
+    redLightDiv.classList.toggle('bulb');
+    redLightDiv.classList.toggle('redBulb');
+  }
+  if (greenLightDiv.classList.contains('greenBulb')) {
+     greenLightDiv.classList.toggle('bulb');
+     greenLightDiv.classList.toggle('greenBulb');
+  } 
+
 })
 
 // GREEN LIGHT ***********************
@@ -32,6 +60,19 @@ yellowLightDiv.className = "yellowBulb";
 const greenLightButton = document.querySelector('#goButton');
 
 greenLightButton.addEventListener('click', () => {
-  const greenLightDiv = document.getElementById('goLight');
-  greenLightDiv.className = "greenBulb";
+
+  greenLightDiv.classList.toggle('bulb');
+  greenLightDiv.classList.toggle('greenBulb');
+
+  if (yellowLightDiv.classList.contains('yellowBulb')) {
+
+    yellowLightDiv.classList.toggle('bulb');
+    yellowLightDiv.classList.toggle('yellowBulb');
+  }
+  if (redLightDiv.classList.contains('redBulb')) {
+
+    redLightDiv.classList.toggle('bulb');
+    redLightDiv.classList.toggle('redBulb');
+  }
+
 })
